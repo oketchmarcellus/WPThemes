@@ -1,5 +1,5 @@
 # About #
-This repo contains a list of custom themes built from scratch by me as the Developer and Hellen Kabiru( [Link] https://www.smdassociates.co.ke/profile-hellen-kabiru.php) as graphic designer.
+This repo contains a list of custom themes built from scratch by me as the Developer and Hellen Kabiru( https://www.smdassociates.co.ke/profile-hellen-kabiru.php) as graphic designer.
 
 Some of the themes in this repo are:
 * AgriDrive
@@ -13,11 +13,11 @@ These themes showcase a list of intuitive features such:
 * A drag and drop page builder that can be used by the default wordpress theme customizer.
 * Relevant custom themes depending on the design of the theme
 * Support for some most common page builders such as elementor and WP-Baker
-* Support for Metabox plugin ([Link] https://metabox.io/).
+* Support for Metabox plugin (https://metabox.io/).
 * WordPress demo content
 
 
-You can download and install my themes for both personal and commercial use for free.In return I would very much like to hear about your experience and some of the features included in the theme. You can simply send me a message on: [Link] https://www.linkedin.com/in/marcel-oketch-2534901b7/.
+You can download and install my themes for both personal and commercial use for free.In return I would very much like to hear about your experience and some of the features included in the theme. You can simply send me a message on: https://www.linkedin.com/in/marcel-oketch-2534901b7/.
 
 To make the best use of my themes, they can be utilized to their max as outlined in the description below:
 

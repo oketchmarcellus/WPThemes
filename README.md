@@ -1,5 +1,5 @@
 # About #
-This repo contains a list of custom themes built from scratch by me as the Developer and Hellen Kabiru( https://www.smdassociates.co.ke/profile-hellen-kabiru.php) as the graphic designer.
+This repo contains a collection of custom themes built from scratch by me as the Developer and Hellen Kabiru( https://www.smdassociates.co.ke/profile-hellen-kabiru.php) as the graphic designer.
 
 Some of the themes in this repo are:
 * AgriDrive

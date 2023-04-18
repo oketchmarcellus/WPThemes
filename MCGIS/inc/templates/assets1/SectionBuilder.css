@@ -1,0 +1,91 @@
+    /**
+     * Page Builder Admin CSS
+    **/
+    #postdivrich{
+    display:none;
+}
+#prodigi-page-builder{
+    margin: 20px 0;
+}
+/* Rows */
+.service-rows{
+    margin-bottom: 30px;
+}
+.service-rows-message{
+    border: 2px dashed #ccc;
+    padding: 10px 20px;
+    text-align: center;
+}
+/* Buttons */
+.service-actions{
+    margin-bottom: 30px;
+}
+/* Row */
+.service-row{
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.service-row-title{
+}
+.service-row-title:after{
+    content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+.service-handle{
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    cursor: grab;
+}
+.service-order{
+    background: #efefef;
+    color: #aaa;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    height: 20px;
+    line-height: 1;
+    margin-top: 5px;
+    padding: 5px 6px;
+    text-align: center;
+    text-decoration: inherit;
+    vertical-align: top;
+    width: 20px;
+}
+.service-row-title-text{
+    padding: 5px;
+    display: inline-block;
+}
+.service-remove{
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    float: right;
+    cursor: pointer;
+}
+.service-remove:hover{
+    background: red;
+    color: #fff;
+}
+.service-row-fields{
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+.service-row-fields:after{
+    content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+.service-row-fields textarea{
+    width: 100%;
+    height: 100px;
+}
+.service-col-1{
+    width: 75%;
+}
+/* 1 column template */
+    /* Templates */
+    .service-templates{
+        display: none;
+    }
+

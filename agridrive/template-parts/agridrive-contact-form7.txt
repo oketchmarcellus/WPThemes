@@ -1,0 +1,7 @@
+[text text-326 placeholder "Full Name"] 
+
+[tel tel-225 placeholder "Phone Number"]
+
+[textarea textarea-114 placeholder "Type your message here"]
+
+[submit class:btn "submit"]

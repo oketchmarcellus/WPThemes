@@ -1,0 +1,3 @@
+<div class="top-social-cons"><a href="#" class="socia-link"><i class="fa fa-youtube"></i></a><a href="#" class="socia-link"><i class="fa fa-instagram"></i></a><a href="#" class="socia-link"><i class="fa fa-twitter"></i></a><a href="#" class="socia-link"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="socia-link"><i class="fa fa-pinterest-p"></i></a><a href="#" class="socia-link"><i class="fa fa-rss"></i></a></div>
+</div>

@@ -1,0 +1,548 @@
+/*
+  Theme Name: Production Studio
+  Author: oketch Marcellus
+  Author URI: http://prodigi.co.ke/
+  Description: This is a custom theme By Adroit Theme Studios. 
+  Version: 1.0
+  License: GNU General Public License v2 or later
+  This theme, like WordPress, is licensed under the GPL.
+  Use it for your site, have fun, and share what you've learned with others.
+  Tags:right-sidebar,responsive-layout,custom-header,custom-menu,text-domain,translation-ready;
+  */
+@import url('assets/bootstrap/css/bootstrap.min.css');
+@import url('assets/fonts/font-awesome.min.css');
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body{
+  font-family:'Open Sans', sans-serif;
+  font-size:1.5rem;
+}
+.header-text{
+  left:0px;
+  width:48rem;
+  height:20rem;
+  opacity:0.6;
+  background-color:#790908;
+  color:#ffffff;
+}
+
+#header-content{
+  position: absolute;
+  display: block;
+  top: 35%;
+  padding-left: 20px;
+}
+
+@media(max-width: 767px){
+  #header-content{
+    visibility: hidden;
+  }  
+}
+
+@media(max-width: 991px){
+  #header-content{
+    visibility: hidden;
+  } 
+}
+
+@media(max-width: 1199px){
+  #header-content{
+    top: 35%;
+  }  
+}
+
+@media(min-width: 1200px){
+  #header-content{
+    top: 50%;
+  }  
+}
+
+.logo-img{
+  width:100px;
+}
+
+.navbar-default{
+  background:#2d2924;
+  opacity:0.7;
+  border-width:0px;
+  border-radius:0px;
+  border-color:transparent;
+}
+
+.menu{
+  padding-top:60px;
+  margin-left:70px;
+}
+
+.logo-img{
+  float:left;
+}
+
+.navbar{
+  margin-left:120px;
+  height:50px;
+}
+
+.nav > li{
+  text-transform:uppercase;
+}
+
+.welcome{
+  width:100%;
+  height:auto;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.heading2{
+  font-weight:700;
+  margin-top:0px;
+}
+
+.heading1{
+  margin-bottom:0px;
+}
+
+.navbar-default .navbar-nav > li .active > a.text-info{
+  background-color:transparent;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color:#ffffff;
+  font-weight:bold;
+  background-color:transparent;
+  border-right:3px solid #ffffff;
+  height:17px;
+  margin-top:20px;
+  padding-top:0px;
+  padding-left:35px;
+  padding-right:35px;
+}
+
+.navbar-default .navbar-nav > .current-menu-item > a:focus, .navbar-default .navbar-nav > .current-menu-item > a:hover{
+  color:#555;
+  background:transparent;
+}
+
+.navbar-default .navbar-nav > .current-menu-item > a{
+  color:#cc0402;
+  font-weight:bolder;
+  background:transparent;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #790908;
+}
+
+@media(max-width: 991px){
+  .navbar-collapsed{
+    background-color: #2d2924;
+  }
+}
+
+.heading{
+  font-weight:700;
+  color:#790908;
+  display:inline;
+  padding-left:10px;
+}
+
+.heading-icon{
+  display:inline;
+  width:50px;
+}
+
+.heading-helper{
+  margin-top:30px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+
+.releases-thumbs{
+  text-align: center;
+}
+
+.project-heading{
+  font-weight:700;
+  margin-bottom:0px;
+}
+
+.projects-txt{
+  color:#790908;
+}
+
+.see-more{
+  text-align:center;
+  padding-top:30px;
+}
+
+.more{
+  width:250px;
+  height:30px;
+  color:#790908;
+  border:2px solid;
+  padding-top:0px;
+  background-color:#ffffff;
+}
+
+.latest-news{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.news-heading{
+  font-weight:700;
+  color:#fb7d7d;
+}
+
+.news-txt{
+  color:#ffffff;
+  background:#790908;
+  opacity:0.7;
+  padding:5px;
+}
+
+.news-content{
+  margin-left:10px;
+  margin-top:100px;
+  width:200px;
+}
+
+.news{
+  margin-left:auto;
+  margin-right:auto;
+}
+.slider-link:hover{
+  text-decoration: none;
+}
+.footer-content{
+  background-color:#790908;
+  min-height:300px;
+  opacity:.7;
+}
+
+
+.hr2{
+  height:.25rem;
+  border-color:#cc0402;
+  border-width:2px;
+  max-width:300px;
+}
+
+.nav-wrapper{
+  width:100%;
+  position:absolute;
+  z-index:10;
+}
+
+.mast-head{
+  margin-bottom:10px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.carousel-indicators li{
+  background-color:#303030;
+}
+
+.slider-img{
+  width:100%;
+  height:580px;
+}
+
+.foot-cover{
+  padding:0px;
+  width:100%;
+  height:100%;
+  margin-left:0px;
+  margin-right:0px;
+}
+
+.news-img-container1{
+  padding-left:0px;
+  height:256px;
+}
+
+.news-img-container2{
+  padding-left:5px;
+  padding-right:0px;
+}
+
+.location-img{
+  display:inline;
+  margin-left:-50px;
+  float:left;
+  width:40px;
+}
+
+.location-txt{
+}
+
+.carousel-caption{
+  padding-left:20px;
+  left:0px;
+  text-align:left;
+  padding-bottom:20px;
+  color:#fff;
+}
+
+.divider-img{
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:179px;
+}
+
+.divider-img2{
+  background-image:url(../../assets/img/analogue-blur-classic-1648282.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:179px;
+}
+
+.news-img{
+  position:absolute;
+  z-index:-22;
+  max-height:256px;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.feat-img{
+  height:100%;
+  width:100%;
+}
+
+.featured-image{
+  padding-right:0px;
+  margin-right:60px;
+  padding-left:0px;
+}
+
+
+.featured-image img{
+  width: 100%;
+}
+
+.featured-image2{
+  padding-right:0px;
+  padding-left:0px;
+}
+
+.page-content{
+  padding-right:30px;
+}
+
+.gallery{
+  margin-top:10px;
+  padding-top:10px;
+  margin-bottom:20px;
+}
+
+.gallery-image{
+  padding:0px;
+}
+
+.main-section{
+  margin-left:10px;
+  margin-right:20px;
+  margin-top:20px;
+}
+
+.canvas{
+  padding:0px;
+}
+
+.posts-section{
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-right:30px;
+}
+
+.posts-helper{
+  padding-left:0px;
+  padding-right:0px;
+  background:#808080;
+  margin-left:15px;
+}
+
+.posts-helper1{
+  padding-left:0px;
+  padding-right:0px;
+  margin-left:5px;
+}
+
+.text-helper2{
+  min-height:320px;
+  margin-left:50px;
+  margin-right:50px;
+  padding-top:10px;
+}
+
+.wp-custom-header img{
+  height: 100%;
+  object-fit: cover;
+  width:100%;
+}
+
+.mast-head2{
+  height:300px;
+  width:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding-bottom: 10px;
+}
+
+.mast-cover{
+  background-color:#790908;
+  display:table;
+  color:#ffffff;
+  opacity:0.6;
+  width:100%;
+  min-height:300px;
+}
+
+.page-title{
+  text-align:center;
+  display:table-cell;
+  vertical-align:bottom;
+  padding-bottom: 15px;
+}
+
+.service-heading{
+  text-align:center;
+}
+
+.hr-#808080{
+  width:250px;
+  border-color:#808080;
+}
+
+.team-section{
+  padding-top:10px;
+  margin-top:20px;
+}
+
+.team-intro-text{
+  text-align:center;
+}
+
+.team-members{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.contact-text{
+  text-align:center;
+  color:white;
+  display:table;
+  width:100%;
+  height:100%;
+  background:#000000;
+  opacity:0.5;
+}
+
+.contact-text-inner{
+  display:table-cell;
+  vertical-align:middle;
+  font-family:inherit;
+  font-weight:bold;
+}
+
+.news-slider{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.controls{
+  margin-bottom:10px;
+}
+
+.glyphicon{
+  color:#cc0402;
+}
+
+.title-text{
+  text-align:center;
+}
+
+.post-heading-helper{
+  display:table-cell;
+}
+
+.post-heading1{
+  color:#ffffff;
+}
+
+.post-heading2{
+  color:#f26b83;
+}
+
+.newsbytes{
+  margin-bottom:5px;
+}
+.submit{
+  width: 200px;
+  height: 30px;
+  color: #790908;
+  border: 2px solid;
+  padding-top: 0px;
+  background-color: #ffffff;
+}
+
+#comment{
+  border-radius: 5px;
+  color: #790908;
+  border: 2px solid;
+}
+#author, #email {
+  border-color: #790908;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+#url{
+  border-color: #790908;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+.main-section, .releases{
+  display: flow-root;
+}
+/*use this to instead of flow-root in IE*/
+.main-section, .releases:after {
+  content:"";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+footer{
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.footer-bg{
+  padding:0px;
+  margin-top:20px;
+  margin-left:0px;
+  margin-right:0px;
+}
+
+.footer-text{
+  font-family:roboto;
+  font-weight:bold;
+  margin-top:50px;
+  padding-left:150px;
+  color:#ffffff;
+}
+hr{
+  height:.25rem;
+  border-color:#cc0402;
+  border-width:2px;
+  max-width:1200px;
+}

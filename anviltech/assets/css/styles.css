@@ -1,0 +1,311 @@
+.menu-container{
+  display:inline-block;
+  text-align:center;
+  height:120px;
+}
+
+li.list-group-item{
+  display:inline;
+}
+
+.top-menu{
+  text-transform:uppercase;
+  text-align:center;
+}
+
+.top-header{
+  margin-top:30px;
+}
+
+li{
+  display:inline;
+  padding:10px;
+}
+
+.top-social-cons{
+  display:inline-block;
+  float:right;
+}
+
+.socia-link{
+  font-size:2em;
+  padding-right:10px;
+  color:#113df0;
+}
+
+.socia-link2{
+  font-size:2em;
+  padding-right:10px;
+  color:#ffffff;
+}
+
+.main-menu{
+  text-align:center;
+  text-transform:uppercase;
+}
+
+li > active > a:hover{
+  border:0px;
+}
+
+:{
+}
+
+.nav-tabs > li.active > a.link-item{
+  border:0px;
+}
+
+.mast-head{
+  position:relative;
+  color:white;
+  text-align:center;
+  background-image:url(../../assets/img/anvilcover2.png);
+  background-position:center;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  position:relative;
+  width:100%;
+  min-height:400px;
+}
+
+.primary-hr{
+  max-width:50px;
+  border-width:3px;
+  border-color:#113df0;
+}
+
+.text-primary.{
+}
+
+.text-primary{
+  color:#113df0;
+}
+
+body{
+  font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+p{
+  font-size:16px;
+  line-height:1.5;
+  margin-bottom:20px;
+}
+
+.service-row{
+  padding:70px 0;
+}
+
+.border-hr{
+  padding:10px;
+}
+
+.shadow-box-it{
+  box-shadow:0 0 5px 2px rgba(0,0,0,.35);
+  padding-bottom:10px;
+}
+
+.text-muted{
+  color:#868e96 !important;
+}
+
+.call-to-action{
+  padding:50px 0;
+}
+
+.bg-dark{
+  color:white;
+  background-color:#222222 !important;
+}
+
+.premiums-row{
+  padding-bottom:70px;
+}
+
+.mx-auto{
+  margin-right:auto !important;
+  margin-left:auto !important;
+}
+
+.contact{
+  padding:0px 0;
+  background-color:#f9f8f8;
+}
+
+.container.contact-cont{
+  margin-right:auto;
+  margin-left:auto;
+  padding-right:15px;
+  padding-left:15px;
+  width:100%;
+}
+
+.link-item{
+  text-transform:uppercase;
+}
+
+.menu-col{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.free-row{
+  padding-top:15px;
+  padding-bottom:20px;
+}
+
+.service-box{
+  height:180px;
+}
+
+.tag{
+  position:absolute;
+}
+
+.tag2{
+  position:absolute;
+}
+
+.img-premium{
+}
+
+.shadow-box-it2{
+  position:relative;
+  box-shadow:0 0 5px 2px rgba(0,0,0,.35);
+  padding-bottom:10px;
+}
+
+.header-browse-button{
+  border:none;
+  background-image:url(../../assets/img/button-background2.png);
+  border-radius:0px;
+  padding-left:0px;
+  padding-right:20px;
+  color:#ffffff;
+  height:39px;
+  width:300px;
+}
+
+.browse-button{
+  border:none;
+  background-image:url(../../assets/img/button-background3.png);
+  border-radius:0px;
+  padding-left:20px;
+  padding-right:20px;
+  color:#ffffff;
+  height:39px;
+  width:230px;
+}
+
+.browse-shop{
+  background-color:#f9f8f8;
+}
+
+.pop-categories{
+  height:250px;
+  width:100%;
+}
+
+.categories{
+  padding:0px 0px 20px 0px;
+}
+
+.cat-icons{
+  width:100px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cat-img{
+  width:100%;
+}
+
+.header-text{
+  font-weight:700;
+}
+
+.cover{
+  margin-top:60px;
+  max-width:650px;
+  padding:10px 0px 10px 10px;
+  position:relative;
+}
+
+.btn{
+  border:none;
+  background-color:initial;
+}
+
+.browse-button-helper1{
+  text-align:left;
+}
+
+a.link-item{
+  background-color:transparent;
+  font-weight:700;
+  color:#113df0;
+}
+
+.nav-tabs > li > a:hover{
+  border-color:transparent;
+  background-color:transparent;
+  font-size:initial;
+}
+
+li.active > a.link-item{
+  background-color:transparent;
+  font-size:initial;
+  font-weight:700;
+}
+
+.why-us{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.responsive-templates{
+  position:relative;
+  text-align:left;
+}
+
+.responsive-text{
+  margin-top:100px;
+  vertical-align:middle;
+}
+
+.responsive-template{
+  margin-top:50px;
+}
+
+footer{
+  background-color:#929496;
+  min-height:500px;
+}
+
+.footer-list{
+  color:#ffffff;
+}
+
+.footer-ls-item{
+  display:inherit;
+  line-height:.3em;
+}
+
+.footer-ls{
+  margin-top:50px;
+  text-align:center;
+}
+
+.bottom-social-cons{
+  text-align:left;
+}
+
+.bottom-contact{
+  color:#113df0;
+}
+
+.contact-text{
+  color:inherit;
+}
+

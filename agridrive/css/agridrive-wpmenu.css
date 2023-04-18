@@ -1,0 +1,16 @@
+
+.navbar-nav > li > .sub-menu {
+	display: none;
+	position: absolute;
+}
+.sub-menu > li > a:focus, .sub-menu > li > a:hover {
+	text-decoration: none;
+}
+.navbar-default .navbar-nav > li.menu-item-has-children:hover ul.sub-menu  {
+	display: block;
+}
+
+.navbar-default .navbar-nav > li ul.sub-menu li a {
+	color: #000;
+	display: block;
+}

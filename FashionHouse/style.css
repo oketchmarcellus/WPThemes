@@ -1,0 +1,349 @@
+/*
+  Theme Name: fashionHouse
+  Author: ProDigi
+  Author URI: http://prodigi.co.ke/
+  Description: This is a custom theme for clients only.
+  Version: 1.0
+  License: GNU General Public License v2 or later
+  This theme, like WordPress, is licensed under the GPL.
+  Use it for your site, have fun, and share what you've learned with others.
+  Tags:right-sidebar,responsive-layout,custom-header,custom-menu,text-domain,translation-ready;
+  */
+@import url('assets/bootstrap/css/bootstrap.min.css');
+@import url('assets/fonts/font-awesome.min.css');
+ 
+ body{
+  font-family:montserrat;
+}
+
+.best-deal{
+  background-color:#18384e;
+  height:250px;
+}
+
+.offers{
+  display:block;
+  margin-bottom:20px;
+}
+
+.offer-img{
+  width:100%;
+  height:auto;
+  margin-bottom:10px;
+}
+
+.announcement{
+  background-color:#558bb2;
+  height:35px;
+}
+
+.sec-3{
+  height:300px;
+  margin-bottom:20px;
+}
+
+footer{
+  background-color:black;
+  min-height:350px;
+}
+
+.banner{
+  display:block;
+}
+
+.off1{
+  padding:0px;
+}
+
+.off2{
+  padding:0px;
+}
+
+.foot-info{
+}
+
+.inner-content{
+  position:relative;
+  width:90%;
+  float:none!important;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:40px;
+}
+
+.top-cat-col{
+  padding-left:0px;
+  padding-right:15px;
+}
+
+.top-cat-col3{
+  padding-left:3px;
+  padding-right:0px;
+}
+
+.top-cat-col4{
+  padding-right:0px;
+}
+
+.top-cat-col2{
+  padding-left:2px;
+  padding-right:10px;
+}
+
+.logo1{
+}
+
+.logo{
+  width:150px;
+  height:50px;
+  float:left;
+}
+
+.featured1{
+  background-color:#ffdead;
+  height:440px;
+}
+
+.featured-img{
+  padding:10px;
+  background-color:#ffdead;
+  height:440px;
+}
+
+.foot-menu{
+  list-style:none;
+  color:#bcbcbc;
+}
+
+.best-txt{
+}
+
+.best-deal-txt{
+  color:#fff;
+  padding:5px;
+}
+
+.best-buy-img1{
+  float:left;
+  max-height:280px;
+}
+
+.men-best-buy2{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.arrivals3{
+  display:block;
+  height:330px;
+  background-color:#ffdead;
+  padding-top:10px;
+}
+
+.special-off1{
+  display:block;
+  width:200px;
+}
+
+.special-off2{
+  display:block;
+  width:200px;
+}
+
+.men-best-buy{
+  max-height:320px;
+  padding:0px;
+}
+
+.new-arrivals{
+  margin-bottom:10px;
+}
+
+@media(min-width 992px){
+}
+
+FREE DELIVERY AS FROM KSHS 5000{
+}
+
+.announcement1{
+  background-color:#18384e;
+  height:320px;
+}
+
+.main-img{
+  width:100%;
+  height:100%;
+}
+
+@media screen and (min-width:920px){
+}
+
+.arrivals{
+  display:block;
+  height:330px;
+  padding-top:50px;
+  box-shadow:1px 1px rgba(0,0,0,.35);
+}
+
+.arrivals1{
+  display:block;
+  padding-right:25px;
+  background-color:#18384e;
+  height:330px;
+}
+.arrv2{
+  margin-left:0px;
+  margin-right:0px;
+}
+
+.top-brand{
+  max-height:420px;
+}
+
+.arrivals3-img{
+  height:245px;
+}
+
+.best-offer{
+  height:616px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.best-deal-msg{
+  padding-left:0px;
+  position:relative;
+}
+
+.menu{
+  padding-left:0px;
+}
+
+.footer-ls{
+  text-align:center;
+}
+
+.slash-left{
+  float:left;
+}
+
+.slash-right{
+}
+
+.quote{
+  position:relative;
+}
+
+qoute-txt{
+}
+
+.qoute-txt{
+  padding-top:25px;
+}
+
+.qoute{
+  background-color:#f9f6f6;
+}
+
+hr{
+  width:350px;
+  border-width:4px;
+  border-color:#558bb2;
+}
+
+.feat-text{
+  color:#18384e;
+  font-weight:700;
+}
+
+.deals-heading{
+  position:absolute;
+  color:#ffffff;
+  margin-top:10px;
+  padding-left:20px;
+}
+
+.deals-img{
+}
+
+.top-cat-heading{
+  background-color:#ffdead;
+  height:50px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+.box-it2{
+  box-shadow:0 0 5px 2px rgba(0,0,0,.35);
+  padding-bottom:4px;
+  height:320px;
+}
+
+.box-it1{
+  box-shadow:0 0 5px 2px rgba(0,0,0,.35);
+  height:320px;
+  padding-top:10px;
+}
+
+.arrivals2{
+  padding:8px;
+  padding-top:0px;
+}
+
+.top-cat-grad1{
+  height:50px;
+  padding:0px;
+  background:linear-gradient(90deg, rgba(255,255,255,1) 0, rgba(255,222,173,1) 100%);
+}
+
+.top-cat-grad2{
+  height:50px;
+  padding:0px;
+  background:linear-gradient(270deg, rgba(255,255,255,1) 0, rgba(255,222,173,1) 100%);
+}
+
+.top-cat-txt{
+  margin-top:10px;
+  font-style:italic;
+}
+
+.top-brand-col1{
+  padding:20px;
+}
+
+.beauty-quote-txt{
+  font-style:italic;
+  font-size:large;
+}
+
+.copy-right{
+  margin-top:20px;
+  color:#ffffff;
+}
+
+.contact{
+  margin-top:15px;
+  padding-left:0px;
+  color:#558bb2;
+}
+
+.featured{
+  background:#ffdead;
+}
+
+.deals{
+  background:#18384e;
+  margin-bottom:20px;
+}
+
+.fa-items{
+  padding-right:10px;
+  color:#558bb2;
+}
+
+.socio-cons{
+  text-align:center;
+  font-size:2em;
+}
+

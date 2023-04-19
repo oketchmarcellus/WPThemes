@@ -28,7 +28,7 @@ To make the best use of my themes, they can be utilized to the max as outlined i
 
 * Fctalanta is a multi-purpose theme that can be of great use for football and other sports clubs.
 
-* Musicstudio and Anviltech are also multip-purpose are designed for small business that would like to showcase their merchandise or products. However, please take note that WooCommerce support are yet to be added to these themes.
+* Musicstudio and Anviltech are also multip-purpose are designed for small businesses that would like to showcase their merchandise or products. However, please take note that WooCommerce support is yet to be added to these themes.
 
 * FashionHouse, MCGIS and Prodigi are still a work in progress.
 

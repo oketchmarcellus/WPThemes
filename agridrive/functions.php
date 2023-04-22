@@ -78,7 +78,7 @@ add_theme_support( 'custom-header', $args );
 /*Register Default header*/
 		$header_images = array(
 			'default-image1' => array(
-				'url'           =>	,
+				'url'           =>'',
 				'thumbnail_url' =>	'%s/assets/img/header1.jpg',
 				'description'   =>	'header default1',
 		),

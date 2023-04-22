@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="<?php bloginfo('charset');?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +23,8 @@
                       'depth'             => 1,
                       'container'         => 'ul',
                       'menu_class'        => 'social-icons',
+                      'link_before'    => '<span class="socio-item">',
+                      'link_after'     => '</span>',
                     ));
                 ?>
 			</div>

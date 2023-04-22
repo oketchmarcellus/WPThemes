@@ -14,6 +14,13 @@ $agridrive_contact_page_content = get_theme_mod( 'agridrive_contact_page_content
         <h2><?php echo esc_html($current_options['contact_page_title']) ;?></h2>
         <div class="row">
           <?php if ( ! empty( $agridrive_contact_page_content ) ) {
+            $allowed_html = array(
+          'br'     => array(),
+          'em'     => array(),
+          'strong' => array(),
+          'b'      => array(),
+          'i'      => array(),
+          );
         $agridrive_contact_page_content = json_decode( $agridrive_contact_page_content );
             foreach ( $agridrive_contact_page_content as $selected_item ) {
             $icon = $selected_item->icon_value;
@@ -33,7 +40,7 @@ $agridrive_contact_page_content = get_theme_mod( 'agridrive_contact_page_content
               <p><strong><?php echo esc_html( $title ); ?></strong> <br></p>
               <?php endif; ?>
               <?php if ( ! empty( $text ) ) : ?>
-              <p><?php echo ( $text); ?></p>
+              <p><?php echo wp_kses( html_entity_decode( $text ), $allowed_html );?></p>
               <?php endif; ?>
             </div>
           </div>

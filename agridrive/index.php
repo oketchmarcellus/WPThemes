@@ -16,7 +16,7 @@ endif; ?>
 <section class="news" style="background-image: url('<?php echo esc_url($current_options['latestnewsbg_img'])?>');">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
   <div class="container">
-    <h2 id="news-heading" style="border-bottom: dashed 1px #a35719"><span><font color="#a35719">Latest </font>News</span></h2>
+    <h2 id="news-heading" style="border-bottom: dashed 1px #a35719"><span><font color="#a35719"></font><?php the_title();?></span></h2>
       <?php if(has_post_thumbnail()){?>
       <div class="row" style="margin-bottom:12px; background:#FFFFFF;">
       <div class="thumbnail">
@@ -54,6 +54,14 @@ endif; ?>
     <?php }?>
     <?php endwhile; ?>
   <?php endif;?> 
+   <div class="row">
+          <div class="col-xs-6 col-sm-6">
+            <?php previous_post_link('<a><span class="fa fa-long-arrow-left" aria-hidden="true"></span> Previous Page</a>',true);?>
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            <?php next_post_link('<a><span class="fa fa-long-arrow-right" aria-hidden="true"></span> Next Page</a>',true);?>
+          </div>
+    </div>
 </section>
 <!-- Newsletter End -->
 <?php get_footer(); ?>

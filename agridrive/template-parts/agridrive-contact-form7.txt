@@ -5,3 +5,7 @@
 [textarea textarea-114 placeholder "Type your message here"]
 
 [submit class:btn "submit"]
+
+
+//sign-up form
+[email* email-356 id:exampleInputName class:form-control placeholder "Enter your email"][submit class:bttn "Subscribe"]

@@ -129,7 +129,7 @@ function agridrive_stories_slider() {
   );
     $args = array(
     'labels'             => $labels,
-    'menu_icon'      => get_template_directory_uri() . '/images/icons/stories-icon.png',
+    'menu_icon'      => 'dashicons-book',
     'description'        => __( 'Agridrive Success Stories'),
     'public'             => true,
     'publicly_queryable' => true,
@@ -147,7 +147,7 @@ function agridrive_stories_slider() {
    );
   register_post_type( 'Success_stories', $args );
 }
-// Add Custom "Members Categories" taxonomy
+// Add Custom "Stories Categories" taxonomy
 register_taxonomy( 'stories-categories', array( 'Success_stories' ),
   array(
   'public' => true,
@@ -179,7 +179,7 @@ function agridrive_services_items() {
   );
     $args = array(
     'labels'             => $labels,
-    'menu_icon'      => get_template_directory_uri() . '/images/icons/services-icon.png',
+    'menu_icon'      => 'dashicons-hammer',
     'description'        => __( 'The Agridrive Services'),
     'public'             => true,
     'publicly_queryable' => true,

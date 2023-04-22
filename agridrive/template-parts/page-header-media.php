@@ -14,7 +14,11 @@
 <!-- Inner Banner Wrapper Start -->
 <div class="inner-banner about-banner" style="background-image: url('<?php echo get_template_directory_uri().'/images/about/about-header-bg.jpg'?>');">
   <div class="container">
+    <?php if ( ( is_single() || ( is_page() ) )):?>
     <h2><?php the_title();?></h2>
+    <?php elseif (is_archive()):?>
+      <h2>Archives</h2>
+    <?php endif;?>
     <ul class="inner-breadcrumb">
      <?php get_agridrive_breadcrumb();?>
     </ul>

@@ -21,8 +21,8 @@
                 'menu_class'     => 'footer-menu',
                 'container'         => 'ul',
                 'depth'          => 1,
-                'link_before'    => '<i class="fa fa-angle-right hidden-xs">',
-                'link_after'     => '</i>',
+                'link_before'    => '<i class="fa fa-angle-right hidden-xs"><span class="quick-menu">',
+                'link_after'     => '</span></i>',
               ) );
             ?>
     <?php }?>

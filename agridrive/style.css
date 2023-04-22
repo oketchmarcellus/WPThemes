@@ -985,7 +985,7 @@ header.affix .affix-logo {
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
 	margin: 50px 0 0 0;
-	height: 40rem;
+	height: 32em;
 	padding-bottom:20px;
 }
 .our-services .services:before {
@@ -1084,6 +1084,10 @@ header.affix .affix-logo {
 	font-size: 20px;
 	text-align: center;
 	line-height: 30px;
+}
+.services ul{
+ padding-left: 5px;
+ text-align: justify;
 }
 /*
 ================================================
@@ -1247,6 +1251,31 @@ section.success-stories {
 section.statistics {
 	margin: 0;
 	padding: 0;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+#stats {
+	background: #00833f;
+	opacity: 0.3;
+}
+.count .count-number {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+.count-text {
+	color: #ffffff;
+	font-weight: bold;
+}
+.count-icon i {
+    font-size: 50px;
+    line-height: 25px;
+    color: #ffffff;
+}
+.count-content {
+	padding: 130px 0px;
 }
 /*
 ================================================
@@ -1310,6 +1339,9 @@ section.newsletter {
 	width: 68%;
 	float: left
 }
+.newsletter .newsletter-bg .form input.form-control{
+	
+}
 .newsletter .newsletter-bg .form input.bttn {
 	background: #009a3f ;
 	border: none;
@@ -1325,6 +1357,7 @@ section.newsletter {
 	height: 60px;
 	line-height: 60px;
 }
+
 /*
 ================================================
 13. Testimonials Wrapper
@@ -1649,6 +1682,7 @@ section.news {
 .news ul li {
 	float: left;
 	list-style: none;
+	padding: 10px;
 }
 .news .date li {
 	padding: 10px 20px;
@@ -2679,7 +2713,7 @@ button.close span {
 .inner-wrapper.single-post .list-inline {
 	margin: 0 0 20px 0;
 }
-.inner-wrapper.single-post .sidebar h2 {
+h2.widgettitle {
 	background: #009a3f;
 	color: #fff;
 	font-size: 18px;
@@ -2865,6 +2899,53 @@ button.close span {
 .inner-wrapper .sidebar .tags li:hover a {
 	color: #fff;
 }
+.sidebar ul{
+	padding: 10px;
+}
+
+.sidebar li{
+	padding: 10px;
+}
+
+.news ul li {
+	float: left;
+	list-style: none;
+	padding: 10px;
+}
+
+.widget_recent_entries ul {
+    counter-reset: item;
+}
+
+.widget_recent_entries li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item;
+}
+
+.widget_archive li:before {
+    content: "\f105";
+    font-family: "FontAwesome";
+    font-size: 14px;
+    padding: 0 10px 0 0;
+}
+.widget_tag_cloud li{
+	display: inline-block;
+    list-style: none;
+    background: #f5f5f5;
+    padding: 5px 12px;
+    margin: 0 5px 12px 0;
+}
+.widget_tag_cloud li:hover{
+	background: #009a3f;
+	color: #fff;
+}
+
+.sidebar{
+	background: #fcfdfa;
+}
+
+
+
 /*
 ================================================
 27. Tabs
@@ -3500,6 +3581,15 @@ button.navbar-toggle {
 	position: static;
 	width: 100%;
 }
+.navbar-default ul.nav.navbar-nav li ul {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.navbar-default .navbar-nav > li.menu-item-has-children:hover ul.sub-menu  {
+	display: block;
+}
 /* Banner */
 .banner-wrapper .hero {
 	display: none;
@@ -3850,6 +3940,6 @@ section.why-choose .choose-list .list-cnt {
 	color: #ffffff;
 }
 .widget_media_image img{
-	width: 20px;
+	width: 200px;
 }
 }

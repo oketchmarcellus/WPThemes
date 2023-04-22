@@ -45,6 +45,5 @@ endif; ?>
 <?php get_template_part('template-parts/gallery-section');?>
 <?php get_template_part('template-parts/services-page-items');?>
 <?php get_template_part('template-parts/about-us-accordion');?>
-<?php get_template_part('template-parts/blog-posts-events');?>
 <?php get_template_part('template-parts/contact-us');?>
 <?php get_footer(); ?>

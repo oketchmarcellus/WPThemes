@@ -1,25 +1,22 @@
 <?php
-/**
-* Latest news Section
-*/  
-$agridrive_options= template_data_setup();
-$current_options = wp_parse_args(  get_option( 'agridrive_options', array() ), $agridrive_options );
-
-if($current_options['latest_news_section_enabled'] == true){ ?>
+/*
+*Template Name: Archives Template
+* @link http://prodigi.co.ke
+* @package WordPress
+* @subpackage agridrive
+* @since sept2017 1.0
+*/
+get_header(); ?>
+<!-- Banner Wrapper Start -->
+<?php if ( ( is_single() || is_archive() || ( is_page() && !agridrive_frontpage() ) )):
+    get_template_part('template-parts/page-header-media');
+endif; ?>
+<?php $agridrive_options= template_data_setup();
+      $current_options = wp_parse_args(  get_option( 'agridrive_options', array() ), $agridrive_options );?>
 <section class="news" style="background-image: url('<?php echo esc_url($current_options['latestnewsbg_img'])?>');">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
   <div class="container">
-    <h2 id="news-heading" style="border-bottom: dashed 1px #a35719"><span><font color="#a35719">Latest </font>News</span></h2>
-  <?php
-    $cat_id = get_cat_ID('get_theme_mod("latestnews_category_posts",true)');
-    $args = array(
-    'cat' =>$cat_id,
-    'post_type'=>'post',
-    'posts_per_page'=>2,
-    'post_status'=>'publish',
-    'orderby'=>'date');
-    $latest_news = new WP_Query( $args);
-    if ( $latest_news->have_posts() ) :
-      while ( $latest_news->have_posts() ) : $latest_news->the_post();?> 
+    <h2 id="news-heading" style="border-bottom: dashed 1px #a35719"><span><font color="#a35719"></font><?php the_title();?></span></h2>
       <?php if(has_post_thumbnail()){?>
       <div class="row" style="margin-bottom:12px; background:#FFFFFF;">
       <div class="thumbnail">
@@ -36,7 +33,7 @@ if($current_options['latest_news_section_enabled'] == true){ ?>
       <div class="col-md-8">
         <div class="caption">
         <h3><a href="<?php echo esc_url(get_permalink());?>"><?php the_title();?></a></h3> 
-        <p style="text-align:justify; color:#666666;"><?php the_excerpt(29,'content'); ?></p>
+        <p style="text-align:justify; color:#666666;"><?php echo get_the_content(); ?></p>
         <a href="<?php echo esc_url(get_permalink());?>" class="readmore">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
         </div>
       </div>
@@ -48,7 +45,7 @@ if($current_options['latest_news_section_enabled'] == true){ ?>
         <div class="col-md-12">
           <div class="caption">
             <h3><a href="<?php echo esc_url(get_permalink());?>"><?php the_title();?></a></h3> 
-            <p style="text-align:justify; color:#666666;"><?php echo the_excerpt(29,'content'); ?></p>
+            <p style="text-align:justify; color:#666666;"><?php echo get_the_content(); ?></p>
             <a href="<?php echo esc_url(get_permalink());?>" class="readmore">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
           </div>
         </div>
@@ -56,15 +53,15 @@ if($current_options['latest_news_section_enabled'] == true){ ?>
       </div>
     <?php }?>
     <?php endwhile; ?>
-  <?php endif;?>
-  </div>
-  <div class="paginations">
-    <?php wp_link_pages(array(
-        'before' => '<p class="page-links">' . __( 'Pages:', 'agridrive' ),
-        'after'  => '</p>',
-        'nextpagelink'=>__('Next Page'),
-        'previouspagelink'=>__('Previous Page'),
-      ) ); ?>
-  </div>
+  <?php endif;?> 
+   <div class="row">
+          <div class="col-xs-6 col-sm-6">
+            <?php previous_post_link('<a><span class="fa fa-long-arrow-left" aria-hidden="true"></span> Previous Page</a>',true);?>
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            <?php next_post_link('<a><span class="fa fa-long-arrow-right" aria-hidden="true"></span> Next Page</a>',true);?>
+          </div>
+    </div>
 </section>
-<?php } ?>
+<!-- Newsletter End -->
+<?php get_footer(); ?>

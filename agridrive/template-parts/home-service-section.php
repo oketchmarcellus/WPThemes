@@ -14,6 +14,15 @@ if($current_options['service_section_enabled'] == true){ ?>
     <?php }?>
     <div id="services">
       <?php if ( ! empty( $agridrive_services_content ) ) {
+        $allowed_html = array(
+          'br'     => array(),
+          'em'     => array(),
+          'strong' => array(),
+          'b'      => array(),
+          'i'      => array(),
+          'li'     =>array(),
+          'ul'     =>array(),
+          );
         $agridrive_services_content = json_decode( $agridrive_services_content );
             foreach ( $agridrive_services_content as $selected_item ) {
             $icon = $selected_item->icon_value;
@@ -29,7 +38,7 @@ if($current_options['service_section_enabled'] == true){ ?>
                   <h3><?php echo esc_html( $title ); ?></h3>
                 <?php endif; ?>
                 <?php if ( ! empty( $text ) ) : ?>
-                  <p><?php echo wp_trim_words( $text ,50); ?></p>
+                  <p><?php echo wp_kses( html_entity_decode(wp_trim_words($text,58)), $allowed_html ); ?></p>
                 <?php endif; ?>
                 <!--a href="javascript:void(0)">Read More</a--> 
               </div>

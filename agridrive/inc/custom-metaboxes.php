@@ -99,6 +99,30 @@ function success_stories_meta_box( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'success_stories_meta_box' );
 
+function enable_stats_section_get_meta_box( $meta_boxes ) {
+  $prefix = 'agridrive';
+
+  $meta_boxes[] = array(
+    'id' => 'stats_section',
+    'title' => esc_html__( 'Add stats section', 'agridrive' ),
+    'post_types' => array('page' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => 'false',
+    'fields' => array(
+      array(
+        'id' => $prefix . 'stats_section_checkbox',
+        'name' => esc_html__( 'Enable Stats section', 'agridrive' ),
+        'type' => 'checkbox',
+        'desc' => esc_html__( 'Check to enable stats in this page', 'agridrive' ),
+      ),
+    ),
+  );
+
+  return $meta_boxes;
+}
+
+
 function add_gallery_meta_box( $meta_boxes ) {
   $prefix = 'agridrive';
 
@@ -120,7 +144,8 @@ function add_gallery_meta_box( $meta_boxes ) {
 
   return $meta_boxes;
 }
-add_filter( 'rwmb_meta_boxes', 'add_gallery_meta_box' );
+
+add_filter( 'rwmb_meta_boxes', 'enable_stats_section_get_meta_box' );
 
 function about_us_accordion_metabox( $meta_boxes ) {
   $prefix = 'agridrive';
@@ -229,30 +254,6 @@ function job_description_metabox( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'job_description_metabox' );
 
-function events_metabox( $meta_boxes ) {
-  $prefix = 'agridrive';
-
-  $meta_boxes[] = array(
-    'id' => 'events',
-    'title' => esc_html__( 'Agridrive news & events', 'agridrive' ),
-    'post_types' => array('page' ),
-    'context' => 'advanced',
-    'priority' => 'default',
-    'autosave' => 'false',
-    'fields' => array(
-      array(
-        'id' => $prefix . 'events_checkbox',
-        'name' => esc_html__( 'Agridrive news & Events', 'agridrive' ),
-        'type' => 'checkbox',
-        'desc' => esc_html__( 'Check to enable news & events section on this page', 'agridrive' ),
-      ),
-    ),
-  );
-
-  return $meta_boxes;
-}
-add_filter( 'rwmb_meta_boxes', 'events_metabox' );
-
 function contact_page_metabox( $meta_boxes ) {
   $prefix = 'agridrive';
 
@@ -265,7 +266,7 @@ function contact_page_metabox( $meta_boxes ) {
     'autosave' => 'false',
     'fields' => array(
       array(
-        'id' => $prefix . 'contacts_checkbox',
+        'id' => $prefix . 'agridrive_contacts_checkbox',
         'name' => esc_html__( 'Agridrive Contact Details', 'agridrive' ),
         'type' => 'checkbox',
         'desc' => esc_html__( 'Check to use Page as contact Page', 'agridrive' ),
@@ -276,30 +277,6 @@ function contact_page_metabox( $meta_boxes ) {
   return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'contact_page_metabox' );
-
-function enable_stats_section_get_meta_box( $meta_boxes ) {
-  $prefix = 'agridrive';
-
-  $meta_boxes[] = array(
-    'id' => 'stats_section',
-    'title' => esc_html__( 'Add stats section', 'agridrive' ),
-    'post_types' => array('page' ),
-    'context' => 'advanced',
-    'priority' => 'default',
-    'autosave' => 'false',
-    'fields' => array(
-      array(
-        'id' => $prefix . 'stats_section_checkbox',
-        'name' => esc_html__( 'Enable Stats section', 'agridrive' ),
-        'type' => 'checkbox',
-        'desc' => esc_html__( 'Check to enable stats in this page', 'agridrive' ),
-      ),
-    ),
-  );
-
-  return $meta_boxes;
-}
-add_filter( 'rwmb_meta_boxes', 'enable_stats_section_get_meta_box' );
 
 function production_portfolio_load_wp_admin_scripts(){
 

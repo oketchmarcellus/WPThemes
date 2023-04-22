@@ -3,14 +3,10 @@
 function template_data_setup()
 {	
 	$default_posts_bg_image=get_template_directory_uri().'/images/Our-Latest-News-BG-IMAGE.jpg';
-	$service_upload_one=get_template_directory_uri().'/images/AGRIDRIVE---SUCCESS-STORIES-1.jpg';
-	$service_upload_two=get_template_directory_uri().'/images/AGRIDRIVE---SUCCESS-STORIES-2.jpg';
-	$service_upload_three=get_template_directory_uri().'/images/AGRIDRIVE---SUCCESS-STORIES-3.jpg';
 
 	return $theme_options=array(
 	'home_slider_enabled'=>true,
 	'service_section_enabled'=>true,
-	'service_title'=>true,
 	'why_agridrive_enabled'=>true,
 	'services_section_enabled'=>true,
 	'success_stories_enabled'=>true,

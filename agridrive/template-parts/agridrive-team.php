@@ -6,6 +6,7 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
 <section class="team">
   <div class="container">
 <?php   $args = array('post_type' => 'Team_members', 'posts_per_page' => 100);
+        $count = 0;
         $agri_team= new WP_Query( $args ); ?>
     <?php if ($current_options['directors_enabled']== true ): ?>
     <div class="row" style="margin-bottom:30px;">
@@ -19,12 +20,28 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
+        <!-- The Modal Bio 1-->
+        <div class="modal fade" id="myModal<?php echo $count;?>" tabindex="-1" role="dialog" data-modal="<?php echo $count;?>">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body row"> 
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center"><img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" style="margin-right:5px; width:80%" /></div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <p><b><font style="font-size:16px;"><?php the_title();?></font></b> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p> <hr>
+                            <p><?php echo the_content();?></p> 
+                        </div><!-- end col-md-8 -->
+                        </div> <!-- end modal-body row -->
+                </div><!-- end modal-content  -->
+            </div><!-- end modal-dialog -->
+        </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>
@@ -40,12 +57,28 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
+        <!-- The Modal Bio 1-->
+        <div class="modal fade" id="myModal<?php echo $count;?>" tabindex="-1" role="dialog" data-modal="<?php echo $count;?>">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body row"> 
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center"><img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" style="margin-right:5px; width:80%" /></div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <p><b><font style="font-size:16px;"><?php the_title();?></font></b> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p> <hr>
+                            <p><?php echo the_content();?></p> 
+                        </div><!-- end col-md-8 -->
+                        </div> <!-- end modal-body row -->
+                </div><!-- end modal-content  -->
+            </div><!-- end modal-dialog -->
+        </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>
@@ -61,12 +94,28 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
+        <!-- The Modal Bio 1-->
+        <div class="modal fade" id="myModal<?php echo $count;?>" tabindex="-1" role="dialog" data-modal="<?php echo $count;?>">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body row"> 
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center"><img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" style="margin-right:5px; width:80%" /></div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <p><b><font style="font-size:16px;"><?php the_title();?></font></b> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p> <hr>
+                            <p><?php echo the_content();?></p> 
+                        </div><!-- end col-md-8 -->
+                        </div> <!-- end modal-body row -->
+                </div><!-- end modal-content  -->
+            </div><!-- end modal-dialog -->
+        </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>
@@ -82,12 +131,28 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
+        <!-- The Modal Bio 1-->
+        <div class="modal fade" id="myModal<?php echo $count;?>" tabindex="-1" role="dialog" data-modal="<?php echo $count;?>">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body row"> 
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center"><img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" style="margin-right:5px; width:80%" /></div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <p><b><font style="font-size:16px;"><?php the_title();?></font></b> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p> <hr>
+                            <p><?php echo the_content();?></p> 
+                        </div><!-- end col-md-8 -->
+                        </div> <!-- end modal-body row -->
+                </div><!-- end modal-content  -->
+            </div><!-- end modal-dialog -->
+        </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>
@@ -103,12 +168,13 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>
@@ -124,12 +190,28 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
+        <!-- The Modal Bio 1-->
+        <div class="modal fade" id="myModal<?php echo $count;?>" tabindex="-1" role="dialog" data-modal="<?php echo $count;?>">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body row"> 
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center"><img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" style="margin-right:5px; width:80%" /></div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <p><b><font style="font-size:16px;"><?php the_title();?></font></b> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p> <hr>
+                            <p><?php echo the_content();?></p> 
+                        </div><!-- end col-md-8 -->
+                        </div> <!-- end modal-body row -->
+                </div><!-- end modal-content  -->
+            </div><!-- end modal-dialog -->
+        </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>
@@ -145,12 +227,28 @@ if (get_post_meta( get_the_ID(), 'agridriveteam_section_checkbox', true )) { ?>
                 <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="<?php the_title();?>" />
                 <div class="team-name">
                     <p><strong><?php the_title();?></strong> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p>
-                    <a class="team-btn team-popup" onclick="myFunction()" href="<?php echo esc_url(get_permalink());?>"> READ BIO</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal<?php echo $count;?>" class="team-btn team-popup">Read Bio</a>
                 </div>
             </div>
         </div>
+        <!-- The Modal Bio 1-->
+        <div class="modal fade" id="myModal<?php echo $count;?>" tabindex="-1" role="dialog" data-modal="<?php echo $count;?>">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body row"> 
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center"><img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" style="margin-right:5px; width:80%" /></div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <p><b><font style="font-size:16px;"><?php the_title();?></font></b> <br><?php echo (get_post_meta (get_the_ID(),'agridrive-job_title', true)); ?></p> <hr>
+                            <p><?php echo the_content();?></p> 
+                        </div><!-- end col-md-8 -->
+                        </div> <!-- end modal-body row -->
+                </div><!-- end modal-content  -->
+            </div><!-- end modal-dialog -->
+        </div>
         <?php }?>
         <?php wp_reset_query(); ?>
+        <?php $count++;?>
         <?php endwhile; ?>
     </div>
     <?php endif;?>

@@ -21,8 +21,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     <div class="modal-body"> <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="Project Image"> </div>
 				     <div class="modal-footer">
-                      <button type="button" class="btn btn-default btn-prev" data-modal="<?php echo $count-1; ?>">Prev</button>
-                      <button type="button" class="btn btn-default btn-next" data-modal="<?php echo $count+2; ?>">Next</button>
+                      <button type="button" class="btn btn-default btn-prev" data-modal="<?php echo --$count; ?>">Prev</button>
+                      <button type="button" class="btn btn-default btn-next" data-modal="<?php echo ++$count; ?>">Next</button>
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>	
                   </div>

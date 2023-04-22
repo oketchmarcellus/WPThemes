@@ -18,8 +18,8 @@ if($current_options['newsletter_form_section_enabled'] == true){ ?>
         </div>
         <div class="col-sm-12 col-md-8">
           <div class="form">
-            <input type="text" placeholder="Enter your Email" id="exampleInputName" class="form-control first">
-            <input type="text" class="bttn" value="Subscribe">
+            
+            <?php echo do_shortcode('[contact-form-7 id="173" title="contact form2"]');?>
           </div>
         </div>
       </div>

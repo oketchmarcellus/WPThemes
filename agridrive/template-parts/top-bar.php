@@ -16,7 +16,9 @@
 		   		
 				<div class="col-md-4 col-sm-4 col-xs-4" style="padding:0px;"> 
              		<div class="row">
-             		<div class="col-md-2 col-sm-2 col-xs-2"><br /><img src="<?php echo get_template_directory_uri()?>/images/icons/OUR-LOCATIONS-ICON.PNG" width="20px" /> </div>
+             		<div class="col-md-2 col-sm-2 col-xs-2"><br /><img src="<?php echo get_template_directory_uri()?>/images/icons/agridrive-countries-flag-KE.png" width="20px" />
+             		<img src="<?php echo get_template_directory_uri()?>/images/icons/agridrive-countries-flag-NG.png" width="20px" />
+             		</div>
              		<div class="col-md-10 col-sm-10 col-xs-10" style="padding:0px;">
 						<?php
 							get_template_part( 'template-parts/widgets/header-address-widget' );
@@ -43,9 +45,15 @@
 			   
 			   <div class="col-md-3 col-sm-4 col-xs-4" style="padding:0px;">
 			   		<div class="row">
-			   		<div class="col-md-3 col-sm-2 col-xs-2"><br /> <img src="<?php echo get_template_directory_uri()?>/images/icons/CALL-US-ICON.PNG" width="20px" />
+			   		<div class="col-md-4 col-sm-2 col-xs-2"><br />
+			   		<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
+			   			<div class="col-md-6 col-sm-6 col-xs-6" style="padding:0px;">
+			   				<img src="<?php echo get_template_directory_uri()?>/images/icons/agridrive-countries-flag-KE.png" width="20px" />
+             				<img src="<?php echo get_template_directory_uri()?>/images/icons/agridrive-countries-flag-NG.png" width="20px" />
+             			</div>
              		</div>
-			   		<div class="col-md-9 col-sm-10 col-xs-10" style="padding:0px;">
+             		</div>
+			   		<div class="col-md-8 col-sm-10 col-xs-10" style="padding:0px;">
 						<?php
 							get_template_part( 'template-parts/widgets/header-phone-widget' );
         				?> 

@@ -1116,6 +1116,9 @@ header.affix .affix-logo {
 	text-align: center;
 	line-height: 30px;
 }
+.services ul {
+    padding: 10px;
+}
 /*
 ================================================
 11. Why Choose

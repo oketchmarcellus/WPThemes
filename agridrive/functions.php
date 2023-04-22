@@ -16,6 +16,8 @@ wp_enqueue_style( 'owl-carousle-styling', get_template_directory_uri().'/assets/
 wp_enqueue_style( 'owl-carousle-theme', get_template_directory_uri().'/assets/owl-carousel/css/owl.theme.css');
 wp_enqueue_style( 'ionicons-style', get_template_directory_uri().'/assets/css/ionicons.min.css');
 wp_enqueue_style( 'magnific-style', get_template_directory_uri().'/assets/css/magnific-popup.css');
+wp_enqueue_style( 'team-modal-style', get_template_directory_uri().'/assets/css/team-modal.css');
+
 
 wp_enqueue_style( 'custom-style', get_template_directory_uri().'/style.css');
 }
@@ -78,13 +80,13 @@ add_theme_support( 'custom-header', $args );
 /*Register Default header*/
 		$header_images = array(
 			'default-image1' => array(
-				'url'           =>  '%s/assets/img/header1.jpg',
+				'url'           =>	'%s/assets/img/header1.jpg',
 				'thumbnail_url' =>	'%s/assets/img/header1.jpg',
 				'description'   =>	'header default1',
 		),
 			'default-image2' => array(
 				'url'           =>	'%s/assets/img/header2.jpg',
-				'thumbnail_url' =>'%s/assets/img/header2.jpg',
+				'thumbnail_url' =>	'%s/assets/img/header2.jpg',
 				'description'   => 'header default2'),
 );
 register_default_headers( $header_images );
@@ -117,17 +119,28 @@ add_action('manage_pages_custom_column', 'posts_custom_columns', 5, 2);
 add_filter('manage_post-type_posts_columns', 'posts_columns', 5);
 add_action('manage_post-type_posts_custom_column', 'posts_custom_columns', 5, 2);
 
+// Register Sidebars
+
+function agridrive_register_sidebars() {
+
+// Register Sidebar
+register_sidebar( array(
+	'name' => esc_html__( 'Sidebar', 'agridrive' ),
+	'id' => 'sidebar1',
+	'description' => esc_html__( 'Appears on single post page.', 'agridrive' ),
+	'before_widget' => '<div id="%1$s" class="sidebar %2$s clearfix">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2 class="widgettitle">',
+	'after_title' => '</h2>',
+));
+
+}
+add_action( 'widgets_init', 'agridrive_register_sidebars' );
+
+
 /*add widgets*/
 function header_button_init(){
-	register_sidebar( array(
-		'name' => 'Sidebar widget',
-		'id' => 'sidebarh',
-		'description'   => __('Add widgetshere for your sidebar'),
-		'before_widget' => '<div id="%1$s" class="sidebar %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<p>',
-		'after_title' => '</p>',
-));
+
 	register_sidebar( array(
 		'name' => 'Header Search widget',
 		'id' => 'header_search',
@@ -225,8 +238,9 @@ function custom_footer_widgets() {
 }
 add_action( 'widgets_init', 'custom_footer_widgets' );
 
+
 function get_agridrive_breadcrumb() {
-    echo '<li><a href="'.home_url().'" rel="nofollow">Home</a></li>';
+    echo '<li style="padding:0px"><a href="'.home_url().'" rel="nofollow">Home</a></li>';
     if (is_category() || is_single()) {
         echo "&nbsp;&nbsp;&nbsp;&nbsp;";
         the_category(' &bull; ');
@@ -241,12 +255,19 @@ function get_agridrive_breadcrumb() {
         echo '<li>';
         echo the_title();
         echo '</li>';
-    } elseif (is_search()) {
+    } elseif (is_archive()) {
+        echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+        echo '<li>';
+        echo 'Archives';
+        echo '</li>';
+    }
+     elseif (is_search()) {
         echo "&nbsp;&nbsp;&nbsp;&nbsp;Search Results for... ";
         echo '<li>';
         echo the_search_query();
         echo '</li>';
     }
+
 }
 
 function register_heading_only_widget(){
@@ -269,13 +290,15 @@ require get_template_directory() . '/inc/agridrive-partners/partners-customizer.
 require get_template_directory() . '/inc/agridrive-partners/partners-default.php';
 require get_template_directory() . '/inc/why-agridrive/why-agridrive-customizer.php';
 require get_template_directory() . '/inc/why-agridrive/why-agridrive-default.php';
+require get_template_directory() . '/inc/agridrive-stats/agridrive-stats-customizer.php';
+require get_template_directory() . '/inc/agridrive-stats/agridrive-stats-default.php';
 require get_template_directory() . '/inc/jobs-customizer.php';
 require get_template_directory() . '/inc/agridrive-contact/agridrive-contact-customizer.php';
 require get_template_directory() . '/inc/agridrive-contact/agridrive-contact-default.php';
 require get_template_directory() . '/inc/custom-post-types.php';
 require get_template_directory() . '/inc/custom-metaboxes.php';
 require get_template_directory() . '/inc/custom-controls.php';
-require get_template_directory() . '/inc/colorScheme-customizer.php';
+//require get_template_directory() . '/includes/colorScheme-customizer.php';
 require get_template_directory() . '/inc/footer-customizer.php';
 
 /*register-scripts*/
@@ -304,6 +327,10 @@ function agridrive_scripts(){
 	wp_enqueue_script( 'custom-script-boot');
 	wp_register_script( 'carousel2-script', get_template_directory_uri().'/assets/js/LatestNewsCarousel.js',array('jquery' ),'1.0',true);
 	wp_enqueue_script( 'carousel2-script');
+	wp_register_script( 'team-modal-script-js', get_template_directory_uri().'/js/team-modal.js');
+	wp_enqueue_script( 'team-modal-script-js',array('jquery' ),'1.0',true);
+	wp_register_script( 'counter-up-script', get_template_directory_uri().'/js/counterup.js',array('jquery' ),'1.0',true);
+	wp_enqueue_script( 'counter-up-script');
 	wp_register_script( 'custom-script-js', get_template_directory_uri().'/js/custom.js');
 	wp_enqueue_script( 'custom-script-js',array('jquery' ),'1.0',true);
 	//wp_register_script( 'navigation-script', get_template_directory_uri().'/js/navigation.js',array('jquery' ),'1.0',true);

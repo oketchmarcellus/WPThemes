@@ -78,13 +78,13 @@ add_theme_support( 'custom-header', $args );
 /*Register Default header*/
 		$header_images = array(
 			'default-image1' => array(
-				'url'           => '%s/assets/img/header1.jpg',
+				'url'           =>  '%s/assets/img/header1.jpg',
 				'thumbnail_url' =>	'%s/assets/img/header1.jpg',
 				'description'   =>	'header default1',
 		),
 			'default-image2' => array(
 				'url'           =>	'%s/assets/img/header2.jpg',
-				'thumbnail_url' =>	'%s/assets/img/header2.jpg',
+				'thumbnail_url' =>'%s/assets/img/header2.jpg',
 				'description'   => 'header default2'),
 );
 register_default_headers( $header_images );
@@ -275,7 +275,7 @@ require get_template_directory() . '/inc/agridrive-contact/agridrive-contact-def
 require get_template_directory() . '/inc/custom-post-types.php';
 require get_template_directory() . '/inc/custom-metaboxes.php';
 require get_template_directory() . '/inc/custom-controls.php';
-//require get_template_directory() . '/includes/colorScheme-customizer.php';
+require get_template_directory() . '/inc/colorScheme-customizer.php';
 require get_template_directory() . '/inc/footer-customizer.php';
 
 /*register-scripts*/

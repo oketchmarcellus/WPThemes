@@ -10,6 +10,7 @@ function template_data_setup()
 	return $theme_options=array(
 	'home_slider_enabled'=>true,
 	'service_section_enabled'=>true,
+	'service_title'=>true,
 	'why_agridrive_enabled'=>true,
 	'services_section_enabled'=>true,
 	'success_stories_enabled'=>true,

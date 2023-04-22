@@ -30,7 +30,7 @@ endif; ?>
                                         <?php }?>
                                         <div class="info uk-flex-wrap-middle">
                                             <div class="date">
-                                                November 25, 2015            
+                                                <?php echo get_the_date();?>             
                                             </div>
                                             <div class="name">
                                                 <h4>

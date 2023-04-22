@@ -13,9 +13,9 @@ if($current_options['latest_result_enabled'] == true) { ?>
                                 <div class="uk-container uk-container-center">
                                     <div class="va-latest-top">
 
-                                        <h3 id="latest-results"><?php  echo get_option('latest_results_heading',__('Latest Results','fctalanta')); ?></h3>
+                                        <h3 id="latest-results"><?php  echo get_theme_mod('latest_results_heading',__('Latest Results','fctalanta')); ?></h3>
                                         <div class="tournament">
-                                            <address><?php  echo get_theme_mod('latest_results_venue',__('Camp Toyoyo','fctalanta')); ?><br><br></address> </div>
+                                            <address><?php  echo get_theme_mod('latest_results_venue',__('Cambridgeshire UK','fctalanta')); ?><br><br></address> </div>
                                         <div class="date">
                                             <?php  echo get_theme_mod('latest_results_kickoff',__('November 29, 2019 | 12:00 am','fctalanta')); ?> </div>
                                     </div>

@@ -11111,7 +11111,8 @@ q {
 }
 .va-main-next-match {
   padding: 90px 0;
-  background: url("../images/tr.png") 50% 0 #0060aa;
+  background-position: 50% 0;
+  background-color: #0060aa;
 }
 .va-single-next-match {
   background: #fff;
@@ -12188,7 +12189,6 @@ ul.post-categories{
 }
 .widget_recent_entries li {
   margin: 0;
-  height: 30px;
 }
 .widget_recent_entries li a {
   font-size: 14px;
@@ -13170,7 +13170,8 @@ ul.post-categories{
 }
 .va-main-our-news {
   padding: 90px 0;
-  background: url("../images/our-news-bg.jpg") 50% 100% no-repeat;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
 }
 .gallery-album {
   position: relative;
@@ -16007,4 +16008,7 @@ table {
 .other-players-wrap {
     background: url("../images/other-players-wrap-bg.jpg") 50% 100% no-repeat;
     background-size: 100% 525px;
+}
+#next_match {
+  background: #363533;
 }

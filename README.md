@@ -1,5 +1,5 @@
 # About #
-This repo contains a collection of custom themes built from scratch by me as the Developer and Hellen Kabiru( https://www.smdassociates.co.ke/profile-hellen-kabiru.php) as the graphic designer.
+This repo contains a collection of custom themes built from scratch by me as the Developer and Hellen Kabiru( https://www.smdassociates.co.ke/profile-hellen-kabiru.php) as the graphic designer. 
 
 Some of the themes in this repo are:
 * AgriDrive
@@ -33,6 +33,6 @@ To make the best use of my themes, they can be utilized to the max as outlined i
 * FashionHouse, MCGIS and Prodigi are still a work in progress.
 
 
-**N/B:You can checkout the various screenshot.jpg or png files added alongside each theme project to see some of the great designs what can be achieved using the themes.**
+**N/B:You can checkout the various screenshot.jpg or png files added alongside each theme project to see some of the great designs what can be achieved using the themes. These themes were last tested to be working well on wordpress 5.6**
 
 

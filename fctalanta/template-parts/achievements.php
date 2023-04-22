@@ -1,3 +1,7 @@
+<?php 
+    $fctalanta_options= template_data_setup();
+    $current_options = wp_parse_args(  get_option( 'fctalanta_options', array() ),$fctalanta_options); 
+if($current_options['achievements_section_enabled'] == true) { ?>
 <div class="tm-bottom-a-box tm-full-width  ">
             <div class="uk-container uk-container-center">
                 <section id="tm-bottom-a" class="tm-bottom-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
@@ -16,66 +20,19 @@
                                             </div>
                                             <div class="uk-slider-container">
                                                 <ul class="uk-slider uk-grid uk-grid-width-large-1-2">
+                                                <?php  $args = array('post_type' => 'talanta_awards');
+                                                    $count=0;
+                                                    $gallery_item= new WP_Query( $args );
+                                                while ( $gallery_item->have_posts() ) :
+                                                $gallery_item->the_post(); ?>
                                                     <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img.png" alt="">
+                                                    <div class="img-wrap"><img draggable="false" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="">
                                                         </div>
-                                                        <div class="text">2014 world cup champion</div>
+                                                        <div class="text"><?php the_title();?></div>
                                                     </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img1.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img2.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img3.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img4.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img5.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img3.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img1.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img2.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img3.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="img-wrap"><img draggable="false" src="<?php echo get_template_directory_uri()?>/images/award-img4.png" alt="">
-                                                        </div>
-                                                        <div class="text">2014 world cup champion</div>
-                                                    </li>
+                                                <?php wp_reset_query(); ?>
+                                                <?php $count++;?>
+                                                <?php endwhile; ?>    
                                                 </ul>
                                             </div>
                                         </div>
@@ -136,3 +93,4 @@
                 </section>
             </div>
         </div>
+<?php } ?>

@@ -259,6 +259,12 @@ function fctalanta_customize_register( WP_Customize_Manager $wp_customize ) {
 	     'description' =>sprintf(__('Options for achievements Section','fctalanta')),
 	     'panel' => 'homepage',
 	     'priority' =>89,));
+// Our Team Section
+	$wp_customize->add_section('ourteam',array(
+		'title' =>__('Fc Talanta Team Section','fctalanta'),
+	     'description' =>sprintf(__('Options for Team Section','fctalanta')),
+	     'panel' => 'homepage',
+	     'priority' =>90,));
 //Hide or show fctalanta video presentation
 	$wp_customize->add_setting(
     'fctalanta_options[fctalanta_video_presentation_enabled]',
@@ -344,7 +350,7 @@ function fctalanta_customize_register( WP_Customize_Manager $wp_customize ) {
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'latest_result_home_team_club_logo', array(
             'label'       => __( 'Home Team:', 'fctalanta' ),
             'section'     => 'latest_result',
-            'settings'    => 'latest_result_home_team_club_logo',
+            'settings'    => 'latest_result_home_team',
             'description' => 'Upload Home Team Club Logo,Dimensions 97 x 100px'
     )));
     //Latest Match Home Team Club Title
@@ -652,8 +658,8 @@ $wp_customize->add_control('fctalanta_options[support_heading]',array(
 			'section'	=> 'nextevent',
 			'setting'	=> 'nextevent_timer'
 	));
-	//Next a Club Logo
-	$wp_customize->add_setting( 'next_match_home_team',array(
+	//Next Match Home Club Logo
+	$wp_customize->add_setting( 'next_match_home_team_logo',array(
             'default' => esc_url(get_template_directory_uri()).'/images/talanta-ico.png',
             'transport' =>'postMessage',));
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'lnext_match_home_team', array(
@@ -662,8 +668,20 @@ $wp_customize->add_control('fctalanta_options[support_heading]',array(
             'settings'    => 'next_match_home_team',
             'description' => 'Upload Home Team icon,Dimensions 32 x 32px'
     )));
- 
-    $wp_customize->add_setting( 'next_match_away_team',array(
+ 	//Next Match Home Team Club Title
+	$wp_customize->add_setting('fctalanta_options[next_match_home_team_title]',array(
+			'default'	=> __('Fc Talanta','fctalanta'),
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'type'  => 'theme_mod',
+			'transport' => 'postMessage',
+	));
+	$wp_customize->add_control('fctalanta_options[next_match_home_team_title]',array(
+			'label'	=> __('Home team club title','fctalanta'),
+			'description' => __('Add Home Team Club Title','fctalanta'),
+			'section'	=> 'nextevent',
+			'setting'	=> 'next_match_team_title'
+	));
+    $wp_customize->add_setting( 'next_match_away_team_logo',array(
             'default' => esc_url(get_template_directory_uri()).'/images/team-ava1.png',
             'transport' =>'postMessage',));
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'next_match_away_team', array(
@@ -672,6 +690,19 @@ $wp_customize->add_control('fctalanta_options[support_heading]',array(
             'settings'    => 'next_match_away_team',
             'description' => 'Upload Away Team icon,Dimensions 32 x 32px.'
     )));
+    //Next Match Away Team Club Title
+	$wp_customize->add_setting('fctalanta_options[next_match_away_team_title]',array(
+			'default'	=> __('Eldoret Youth','fctalanta'),
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'type'  => 'theme_mod',
+			'transport' => 'postMessage',
+	));
+	$wp_customize->add_control('fctalanta_options[next_match_away_team_title]',array(
+			'label'	=> __('Home team club title','fctalanta'),
+			'description' => __('Add Home Team Club Title','fctalanta'),
+			'section'	=> 'nextevent',
+			'setting'	=> 'next_match_away_team_title'
+	));
 	//Latest results Match kickoff
 	$wp_customize->add_setting('fctalanta_options[next_match_kickoff]',array(
 			'default'	=> __('November 29, 2019 | 12:00 am','fctalanta'),
@@ -687,7 +718,7 @@ $wp_customize->add_control('fctalanta_options[support_heading]',array(
 	));
 	//Next Match Venue
 	$wp_customize->add_setting('fctalanta_options[next_match_venue]',array(
-			'default'	=> __('Cambridgeshire UK','fctalanta'),
+			'default'	=> __('Camp Toyoyo, Nairobi','fctalanta'),
 			'sanitize_callback'	=> 'sanitize_text_field',
 			'type'  => 'theme_mod',
 			'transport' => 'postMessage',
@@ -698,6 +729,15 @@ $wp_customize->add_control('fctalanta_options[support_heading]',array(
 			'section'	=> 'nextevent',
 			'setting'	=> 'next_match_venue'
 	));
+	$wp_customize->add_setting( 'nextmatchbg_img',array(
+            'default' => esc_url(get_template_directory_uri()).'/images/tr.png',
+            'transport' =>'postMessage',));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'nextmatchbg_img', array(
+            'label'       => __( 'Change Next Match Section background image:', 'fctalanta' ),
+            'section'     => 'nextevent',
+            'settings'    => 'nextmatchbg_img',
+            'description' => 'Upload your background image here.'
+    )));
 	//Latest News Section
 	$wp_customize->add_setting(
     'fctalanta_options[latestnews_section_enabled]',
@@ -756,6 +796,17 @@ $wp_customize->add_control('fctalanta_options[latestnews_heading]',array(
 			'description' => 'Add categories News first then Use featured image feature on contents post to choose image',
 			)));
 	}
+	//Latest News Background Image
+	$wp_customize->add_setting( 'latest_news_bg_image',array(
+            'default' => esc_url(get_template_directory_uri()).'/images/our-news-bg.jpg',
+            'transport' =>'postMessage',));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'latest_news_bg_image', array(
+            'label'       => __( 'Background Image:', 'fctalanta' ),
+            'priority'   => 41,
+            'section'     => 'latestnews',
+            'settings'    => 'latest_news_bg_image',
+            'description' => 'Upload Background Image'
+    )));
 	//Gallery Section
 	$wp_customize->add_setting(
     'fctalanta_options[gallery_section_enabled]',
@@ -818,6 +869,54 @@ $wp_customize->add_control('fctalanta_options[gallery_heading]',array(
         'section' => 'achievements',
         'type' => 'checkbox',
     ));
+    $wp_customize->add_setting(
+    'fctalanta_options[ourteam_section_enabled]',
+    array(
+        'default' => true,
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
+		'type' => 'option',
+    )	
+	);
+	$wp_customize->add_control(
+    'fctalanta_options[ourteam_section_enabled]',
+    array(
+        'label' => __('Enable Players Profile section','fctalanta'),
+		'priority'   => 1,
+        'section' => 'achievements',
+        'type' => 'checkbox',
+    ));
+    $wp_customize->add_setting('fctalanta_options[ourteam_heading]',array(
+			'default'	=> __('Gallery','fctalanta'),
+			'sanitize_callback'	=> 'sanitize_text_field',
+			'type'  => 'theme_mod',
+			'transport' => 'postMessage',
+	));
+$wp_customize->add_control('fctalanta_options[ourteam_heading]',array(
+			'label'	=> __('Our team ','fctalanta'),
+			'description' => __('Change the heading for gallery section to your liking','fctalanta'),
+			'section'	=> 'ourteam',
+			'setting'	=> 'ourteam_heading'
+	));	
+		$wp_customize->add_setting( 'ourteam_content', array(
+			'default'           => '2',
+			'sanitize_callback' => 'absint'
+		) );
+
+		$wp_customize->add_control( 'ourteam_content', array(
+			'label'    => __( 'Select about Team page', 'fctalanta' ),
+			'section'  => 'ourteam',
+			'type'     => 'dropdown-pages'
+	) );
+		$wp_customize->add_setting( 'ourteambg_img',array(
+            'default' => esc_url(get_template_directory_uri()).'/images/our-team-main-wrap-bg.jpg',
+            'transport' =>'postMessage',));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,'ourteambg_img', array(
+            'label'       => __( 'Change Team Profile background image:', 'fctalanta' ),
+            'section'     => 'ourteam',
+            'settings'    => 'ourteambg_img',
+            'description' => 'Upload your background image here.'
+    )));
 	$wp_customize->add_setting( 'newsletterformbg_img',array(
             'default' => esc_url(get_template_directory_uri()).'/images/newsletter-bg.jpg',
             'transport' =>'postMessage',));

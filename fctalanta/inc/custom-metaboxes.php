@@ -51,7 +51,7 @@ function custom_header_image_save ( $post_id ) {
   }
 }
 
-function posts_gallery_metabox($post_type) {
+function add_gallery_metabox($post_type) {
     $types = array('post', 'gallery_items');
 
     if (in_array($post_type, $types)) {
@@ -65,15 +65,15 @@ function posts_gallery_metabox($post_type) {
       );
     }
   }
-  add_action('add_meta_boxes', 'posts_gallery_metabox');
+  add_action('add_meta_boxes', 'add_gallery_metabox');
 
   function gallery_meta_callback($post) {
     wp_nonce_field( basename(__FILE__), 'gallery_meta_nonce' );
-    $ids = get_post_meta($post->ID, 'page_gallery_id', true);
+    $ids = get_post_meta($post->ID, 'vdw_gallery_id', true);
 
     ?>
     <table class="form-table">
-      <tr><td><p>For posts gallery use image size 1929 x 1440 px</p></td></tr>
+      <tr><td><p>For Gallery images use image size 1929 x 1440 px</p></td></tr>
       <tr><td>
         <a class="gallery-add button" href="#" data-uploader-title="Add image(s) to gallery" data-uploader-button-text="Add image(s)">Add image(s)</a>
 
@@ -81,7 +81,7 @@ function posts_gallery_metabox($post_type) {
         <?php if ($ids) : foreach ($ids as $key => $value) : $image = wp_get_attachment_image_src($value); ?>
 
           <li>
-            <input type="hidden" name="page_gallery_id[<?php echo $key; ?>]" value="<?php echo $value; ?>">
+            <input type="hidden" name="vdw_gallery_id[<?php echo $key; ?>]" value="<?php echo $value; ?>">
             <img class="image-preview" src="<?php echo $image[0]; ?>">
             <a class="change-image button button-small" href="#" data-uploader-title="Change image" data-uploader-button-text="Change image">Change image</a><br>
             <small><a class="remove-image" href="#">Remove image</a></small>
@@ -101,13 +101,14 @@ function posts_gallery_metabox($post_type) {
 
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 
-    if(isset($_POST['page_gallery_id'])) {
-      update_post_meta($post_id, 'page_gallery_id', $_POST['page_gallery_id']);
+    if(isset($_POST['vdw_gallery_id'])) {
+      update_post_meta($post_id, 'vdw_gallery_id', $_POST['vdw_gallery_id']);
     } else {
-      delete_post_meta($post_id, 'page_gallery_id');
+      delete_post_meta($post_id, 'vdw_gallery_id');
     }
   }
-add_action('save_post', 'gallery_meta_save');
+  add_action('save_post', 'gallery_meta_save');
+
 
 function kickoff_time( $meta_boxes ) {
   $prefix = 'fctalanta-';
@@ -194,6 +195,63 @@ function away_club_logo_uploader( $meta_boxes ) {
   return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'away_club_logo_uploader' );
+
+function player_bio_get_meta_box( $meta_boxes ) {
+  $prefix = 'fctalanta-';
+
+  $meta_boxes[] = array(
+    'id' => 'player_bio',
+    'title' => esc_html__( 'Player Bio', 'fctalanta' ),
+    'post_types' => array('talanta_team' ),
+    'context' => 'advanced',
+    'priority' => 'default',
+    'autosave' => 'false',
+    'fields' => array(
+      array(
+        'id' => $prefix . 'jersey_no',
+        'type' => 'number',
+        'name' => esc_html__( 'Jersey Number', 'fctalanta' ),
+        'desc' => esc_html__( 'Enter Player Jersey Number', 'fctalanta' ),
+        'placeholder' => esc_html__( '9', 'fctalanta' ),
+      ),
+      array(
+        'id' => $prefix . 'position',
+        'type' => 'text',
+        'name' => esc_html__( 'Player Position', 'fctalanta' ),
+        'desc' => esc_html__( 'Enter the Position the Player plays in', 'fctalanta' ),
+        'placeholder' => esc_html__( 'Striker', 'fctalanta' ),
+      ),
+      array(
+        'id' => $prefix . 'social_twitter',
+        'type' => 'text',
+        'name' => esc_html__( 'Twitter Account', 'fctalanta' ),
+      ),
+      array(
+        'id' => $prefix . 'social_facebook',
+        'type' => 'text',
+        'name' => esc_html__( 'Facebook Account', 'fctalanta' ),
+      ),
+      array(
+        'id' => $prefix . 'social_googleplus',
+        'type' => 'text',
+        'name' => esc_html__( 'Google Account', 'fctalanta' ),
+      ),
+      array(
+        'id' => $prefix . 'social_pinterest',
+        'type' => 'text',
+        'name' => esc_html__( 'Pinterest Account', 'fctalanta' ),
+      ),
+      array(
+        'id' => $prefix . 'social_linkedin',
+        'type' => 'text',
+        'name' => esc_html__( 'LinkedIn Account', 'fctalanta' ),
+      ),
+    ),
+  );
+
+  return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'player_bio_get_meta_box' );
 
 function fctalanta_load_wp_admin_scripts(){
 

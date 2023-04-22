@@ -1,7 +1,7 @@
 <div style="height: 70px;" class="uk-sticky-placeholder">
   <nav style="margin: 0px;" class="tm-navbar uk-navbar" data-uk-sticky="">
     <div class="uk-container uk-container-center">
-        <a class="tm-logo uk-float-left" href="index-2.html">
+        <a class="tm-logo uk-float-left" href="<?php echo get_site_url(); ?>">
           <?php $custom_logo_id = get_theme_mod('custom_logo');
             $logo = wp_get_attachment_image_src($custom_logo_id,'full');?>
           <img class="img-responsive" src="<?php echo esc_url($logo[0]);?>">

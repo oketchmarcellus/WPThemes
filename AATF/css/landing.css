@@ -1,0 +1,198 @@
+.landing-header{  
+  background: url(../../img/landing/header-bg.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+
+}
+.grow{  
+  background: url(../../img/landing/grow-your-business-grey-background.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding:25px 15px; 
+  border-top:5px solid #00a99d;
+  margin-bottom:40px;
+
+}
+.overlay-sec{
+z-index:100;
+margin-top:-100px;
+margin-bottom:40px;
+
+}
+.vertical {
+    display: block;   
+    border-radius: 3px;
+    background-color: #fff; 
+    box-shadow: 5px 5px 20px 0 rgba(218,218,218,0.9);
+	padding:50px 30px;
+	width:96%;
+	margin:auto;
+	text-align:center;
+} 
+.who-we-are{  
+  background: url(../../img/landing/WHO-WE-ARE-background-image.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding:40px 10px;
+
+}
+.what-we-do{  
+  background: #FFFFFF;  
+  padding:40px 10px;
+
+}
+.our-portfolio{  
+  background: url(../../img/landing/OUR-PORTFOLIO-background-image.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding:40px 10px;
+  text-align:center;
+
+}
+.home-of-strategic{  
+  background: url(../../img/landing/PAGE-BREAK-HOME-OF-STRATEGIC-MARKETING-CONSULTANCY-FOR-SMEs.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding:40px 10px; 
+
+}
+.share-with-others{  
+  background: #FFFFFF;  
+  padding:0;
+
+}
+.share-with-others-col{  
+  padding:50px 10px;
+  text-align:center;
+
+}
+.landing-footer{  
+  background: #000000;
+  color:#FFFFFF; 
+  padding:40px;
+  text-align:center;
+
+}
+.landing-footer p{   
+  color:#FFFFFF;
+  font-size:16px;
+  text-align:center;
+
+}
+.landing-footer-rw{    
+  border-bottom:1px solid #00a99d;
+  margin-bottom:20px;
+
+}
+.btn-landing {
+    background-color: #D41C24;
+	color:#FFFFFF;
+}
+.btn-landing:hover {
+    background-color: #CCCCCC;
+	color:#000;
+}
+.btn-def:hover {
+    background-color: #00a99d;
+	color:#FFFFFF;
+}
+.btn-def {
+    background-color: #E6F2F2;
+	color:#000; 
+}
+
+/*--------- Pop Up --------*/
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlayz {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlayz:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 150px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 40%;
+  overflow: hidden;
+  padding:10px 10px 20px 10px;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
